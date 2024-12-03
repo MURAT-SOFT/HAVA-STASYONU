@@ -1,0 +1,125 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     _i2caddr
+022     _vccstate
+023     x_pos
+024     y_pos
+025.0   wrap
+026     i
+027-028 @sprintf_string
+029     SSD1306_StartScrollLeft.start
+029     SSD1306_StartScrollDiagLeft.start
+029     SSD1306_GotoXY.x
+029     SSD1306_StartScrollDiagRight.start
+029-02A SSD1306_ClearDisplay.i
+029     SSD1306_StartScrollRight.start
+029     SSD1306_Init.vccstate
+029     MAIN.@SCRATCH1
+029     @PSTRINGC7_770.@SCRATCH1
+02A     SSD1306_Init.i2caddr
+02A     @PRINTF_U_770.P1
+02A     SSD1306_GotoXY.y
+02A     SSD1306_StartScrollDiagLeft.stop
+02A     SSD1306_StartScrollLeft.stop
+02A     SSD1306_StartScrollDiagRight.stop
+02A     SSD1306_StartScrollRight.stop
+02A     @PSTRINGC7_770.@SCRATCH2
+02B     @delay_ms1.P1
+02B     @PRINTF_U_770.P2
+02B     @PSTRINGC7_770.@SCRATCH3
+02C     SSD1306_PutC.c
+02C     @PSTRINGC7_770.@SCRATCH4
+02D     SSD1306_PutC.font_c
+02E     SSD1306_PutC.i
+02F     @DIV88.P1
+02F     SSD1306_PutC.@SCRATCH1
+030     ssd1306_command.c
+030     @DIV88.P1
+030     SSD1306_PutC.@SCRATCH2
+031     @MUL88.P1
+031     ssd1306_command.control
+031     @DIV88.@SCRATCH1
+032     @MUL88.P1
+032     @I2C_WRITEU_129.P2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  Font.call
+00000B  Font.data
+00010A  Font2.call
+00010E  Font2.data
+0001EA  @const792.call
+000203  @const797.call
+00020A  @const798.call
+000211  @delay_ms1
+000225  @I2C_WRITEU_129
+000235  ssd1306_command
+00024A  SSD1306_Init
+0002BD  SSD1306_ClearDisplay
+0002EA  SSD1306_GotoXY
+0002F7  @MUL88
+00031C  @DIV88
+000331  SSD1306_PutC
+0003AC  @PSTRINGC7_770
+000402  SSD1306_StartScrollRight
+00041A  SSD1306_StopScroll
+00041E  SSD1306_StartScrollLeft
+000436  SSD1306_StartScrollDiagRight
+000454  SSD1306_StartScrollDiagLeft
+000472  @PRINTF_U_770
+0004A9  @cinit1
+0004A9  MAIN
+0004CE  @cinit2
+
+Project Directory:
+    C:\Users\murat\OneDrive\Desktop\pýc16f877a oled\
+
+Project Files:
+    main.c                                                  [03-Ara-24 04:44  CRC=F4B226CC]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [21-Eki-22 11:02  CRC=6A06E202]
+    SSD1306.c                                               [03-Ara-24 04:31  CRC=ED16C3DA]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h [13-May-20 09:33  CRC=4FD89CC0]
+
+Source signature=EB810628
+Program memory checksum=0000
+Hex file CRC=CE89
+
+Units:
+    C:\Users\murat\OneDrive\Desktop\pýc16f877a oled\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
