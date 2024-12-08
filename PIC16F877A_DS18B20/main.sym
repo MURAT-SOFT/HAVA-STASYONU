@@ -1,0 +1,164 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 raw_temp
+022-025 temp
+026-027 @sprintf_string
+028-029 @SITOF.P1
+028-029 ds18b20_read.raw_temp_value
+028-02B @PRINTF_L32D_724FPFPF.P1
+028     lcd_init.i
+028     MAIN.@SCRATCH1
+028     @PSTRINGC7_724.@SCRATCH1
+029-02C lcd_init.LCD_INIT_STRING
+029     MAIN.@SCRATCH2
+029     @PSTRINGC7_724.@SCRATCH2
+02A     ds18b20_write_byte.value
+02A     ds18b20_start.@SCRATCH1
+02A     ds18b20_read.@SCRATCH1
+02A     MAIN.@SCRATCH3
+02A     @PSTRINGC7_724.@SCRATCH3
+02B     @delay_us1.P1
+02B     ds18b20_write_byte.i
+02B     ds18b20_read.@SCRATCH2
+02B     MAIN.@SCRATCH4
+02B     @PSTRINGC7_724.@SCRATCH4
+02C-02F @DIVFF.P1
+02C     @PRINTF_L32D_724FPFPF.P2
+02C     ds18b20_write_byte.@SCRATCH1
+02C     ds18b20_read.@SCRATCH3
+02D     ds18b20_write_bit.value
+02D     lcd_init.@SCRATCH1
+02D     ds18b20_read.@SCRATCH4
+02D     @PRINTF_L32D_724FPFPF.@SCRATCH1
+02E     ds18b20_read_byte.i
+02E     ds18b20_read.@SCRATCH5
+02E     @PRINTF_L32D_724FPFPF.@SCRATCH2
+02F     ds18b20_read_byte.value
+02F     ds18b20_read.@SCRATCH6
+02F     @PRINTF_L32D_724FPFPF.@SCRATCH3
+030-033 @DIVFF.P1
+030.0   ds18b20_read_bit.value
+030     @PRINTF_L32D_724FPFPF.@SCRATCH4
+031     @PRINTF_L32D_724FPFPF.@SCRATCH5
+032     @PRINTF_L32D_724FPFPF.@SCRATCH6
+033     @PRINTF_L32D_724FPFPF.@SCRATCH7
+034     @DIVFF.@SCRATCH1
+034     @PRINTF_L32D_724FPFPF.@SCRATCH8
+035     lcd_putc.c
+035-038 @MULFF.P1
+035-038 @FTOSD.P2
+035-038 @DIV3232.P3
+035     @DIVFF.@SCRATCH2
+036     @delay_ms1.P1
+036     lcd_gotoxy.x
+036     @DIVFF.@SCRATCH3
+037     lcd_gotoxy.y
+037     @DIVFF.@SCRATCH4
+038     lcd_gotoxy.address
+038     @DIVFF.@SCRATCH5
+039-03C @MULFF.P1
+039-03C @DIV3232.P2
+039     lcd_gotoxy.@SCRATCH1
+039     @DIVFF.@SCRATCH6
+039     @FTOSD.@SCRATCH1
+03A     lcd_send_byte.address
+03B     lcd_send_byte.n
+03C     lcd_read_byte.low
+03C     lcd_send_byte.@SCRATCH1
+03D     lcd_send_nibble.n
+03D     lcd_read_byte.high
+03D     @MULFF.@SCRATCH1
+03D     @DIV3232.@SCRATCH1
+03E     lcd_read_nibble.n
+03E     lcd_read_byte.@SCRATCH1
+03E     @MULFF.@SCRATCH2
+03E     @DIV3232.@SCRATCH2
+03F     lcd_read_nibble.@SCRATCH1
+03F     @MULFF.@SCRATCH3
+03F     @DIV3232.@SCRATCH3
+040     @MULFF.@SCRATCH4
+040     @DIV3232.@SCRATCH4
+041     @MULFF.@SCRATCH5
+041     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const754.call
+00000B  @const776.call
+00000D  @const777.call
+000012  @delay_ms1
+000026  lcd_send_nibble
+000052  lcd_read_nibble
+000083  lcd_send_byte
+00008B  lcd_read_byte
+0000DF  lcd_init
+000125  lcd_gotoxy
+000137  lcd_putc
+000163  @PSTRINGC7_724
+0001B9  @delay_us1
+0001CA  ds18b20_start
+0001F0  ds18b20_write_byte
+000205  ds18b20_write_bit
+000221  ds18b20_read_byte
+000227  ds18b20_read_bit
+00024E  ds18b20_read
+0002A6  @SITOF
+0002CD  @DIVFF
+000399  @DIV3232
+0003E8  @PRINTF_L32D_724FPFPF
+0003FC  @MULFF
+000482  @FTOSD
+00053D  @cinit1
+00053D  MAIN
+000549  @cinit2
+
+Project Directory:
+    C:\Users\murat\OneDrive\Desktop\CIHAZ-HSP-1T\DH11\
+
+Project Files:
+    main.c                                                  [08-Ara-24 12:54  CRC=3480C54B]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [21-Eki-22 09:02  CRC=6A06E202]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Þub-16 08:05  CRC=D1A6378A]
+
+Source signature=41D41661
+Program memory checksum=0000
+Hex file CRC=BAC5
+
+Units:
+    C:\Users\murat\OneDrive\Desktop\CIHAZ-HSP-1T\DH11\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
