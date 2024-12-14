@@ -1,0 +1,122 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-02F message1
+030-03F message2
+040.0   Time_out
+041     T_byte1
+042     T_byte2
+043     RH_byte1
+044     RH_byte2
+045     CheckSum
+046-047 Temp
+048-049 RH
+04A-04B @sprintf_string
+04C     lcd_init.i
+04C     Read_Data.i
+04C     check_response.@SCRATCH1
+04C     MAIN.@SCRATCH1
+04C     @PSTRINGC7_731.@SCRATCH1
+04C     @PSTRINGR_731.@SCRATCH1
+04D-050 lcd_init.LCD_INIT_STRING
+04D     Read_Data._data
+04D     check_response.@SCRATCH2
+04D     MAIN.@SCRATCH2
+04D     @PSTRINGC7_731.@SCRATCH2
+04D     @PSTRINGR_731.@SCRATCH2
+04E-04F @DIV1616.P1
+04E     Read_Data.@SCRATCH1
+04E     @PSTRINGC7_731.@SCRATCH3
+04F     lcd_putc.c
+04F     Read_Data.@SCRATCH2
+04F     @PSTRINGC7_731.@SCRATCH4
+050-051 @DIV1616.P1
+050     lcd_gotoxy.x
+051     lcd_gotoxy.y
+051     @delay_ms1.P1
+051     lcd_init.@SCRATCH1
+052     lcd_gotoxy.address
+052     @DIV1616.@SCRATCH1
+053     lcd_gotoxy.@SCRATCH1
+054     lcd_send_byte.address
+055     lcd_send_byte.n
+056     lcd_read_byte.low
+056     lcd_send_byte.@SCRATCH1
+057     lcd_read_byte.high
+057     lcd_send_nibble.n
+058     lcd_read_nibble.n
+058     lcd_read_byte.@SCRATCH1
+059     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const761.call
+000009  @const770.call
+000011  @const771.call
+000017  @const772.call
+00001F  @delay_ms1
+000033  lcd_send_nibble
+00005F  lcd_read_nibble
+000090  lcd_send_byte
+000098  lcd_read_byte
+0000EC  lcd_init
+000132  lcd_gotoxy
+000144  lcd_putc
+000170  start_signal
+000183  check_response
+0001EA  Read_Data
+000251  @PSTRINGC7_731
+0002A7  @DIV1616
+0002CC  @PSTRINGR_731
+0002E2  @cinit1
+0002E2  MAIN
+0002FD  @cinit2
+
+Project Directory:
+    C:\Users\murat\OneDrive\Desktop\PIC16F887 with DHT22 sensor\PIC16F887 interfacing with DHT22 sensor\
+
+Project Files:
+    main.c                                                  [10-Ara-24 05:12  CRC=ECB14375]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [21-Eki-22 09:02  CRC=A60F11E5]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Þub-16 08:05  CRC=D1A6378A]
+
+Source signature=360CC46E
+Program memory checksum=0000
+Hex file CRC=EC0F
+
+Units:
+    C:\Users\murat\OneDrive\Desktop\PIC16F887 with DHT22 sensor\PIC16F887 interfacing with DHT22 sensor\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
