@@ -1,0 +1,352 @@
+ÀÄmain
+   ÃÄMAIN  0/622  Ram=370
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÃÄtft_init  0/84  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄdisplayInit  0/328  Ram=7
+   ³  ³  ³  ÃÄstartWrite  0/2  Ram=0
+   ³  ³  ³  ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7
+   ³  ³  ³  ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7
+   ³  ³  ³  ÃÄwriteCommand  0/16  Ram=1
+   ³  ³  ³  ³  ÀÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³  ³  ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7
+   ³  ³  ³  ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7
+   ³  ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³  ³  ÃÄ@READ_PROGRAM_MEMORY  0/30  Ram=7
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄendWrite  0/2  Ram=0
+   ³  ³  ÀÄsetRotation  0/110  Ram=2
+   ³  ³     ÃÄ@goto32240  0/34  Ram=0
+   ³  ³     ÃÄstartWrite  0/2  Ram=0
+   ³  ³     ÃÄwriteCommand  0/16  Ram=1
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³     ÀÄendWrite  0/2  Ram=0
+   ³  ÃÄ@const1210  0/380  Ram=0
+   ³  ÃÄtestdrawtext  0/48  Ram=4
+   ³  ³  ÃÄdisplay_setCursor  0/18  Ram=4
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄdisplay_setTextWrap  0/12  Ram=1
+   ³  ³  ÀÄ@PSTRINGR_972  0/38  Ram=2
+   ³  ³     ÀÄdisplay_print  0/666  Ram=8
+   ³  ³        ÃÄ@MUL1616  0/34  Ram=5
+   ³  ³        ÃÄ@const1034  0/1294  Ram=0
+   ³  ³        ÃÄdrawPixel  0/74  Ram=7
+   ³  ³        ³  ÃÄstartWrite  0/2  Ram=0
+   ³  ³        ³  ÃÄsetAddrWindow  0/116  Ram=5
+   ³  ³        ³  ³  ÃÄwriteCommand  0/16  Ram=1
+   ³  ³        ³  ³  ³  ÀÄ*
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÃÄwriteCommand  0/16  Ram=1
+   ³  ³        ³  ³  ³  ÀÄ*
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ³  ÀÄwriteCommand  0/16  Ram=1
+   ³  ³        ³  ³     ÀÄ*
+   ³  ³        ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ÀÄendWrite  0/2  Ram=0
+   ³  ³        ÃÄfillRect  0/166  Ram=12
+   ³  ³        ³  ÃÄstartWrite  0/2  Ram=0
+   ³  ³        ³  ÃÄsetAddrWindow  0/116  Ram=5
+   ³  ³        ³  ³  ÀÄ*
+   ³  ³        ³  ÃÄ@MUL1616  0/34  Ram=5
+   ³  ³        ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ÀÄendWrite  0/2  Ram=0
+   ³  ³        ÃÄdrawPixel  0/74  Ram=7
+   ³  ³        ³  ÀÄ*
+   ³  ³        ÃÄfillRect  0/166  Ram=12
+   ³  ³        ³  ÀÄ*
+   ³  ³        ÃÄdrawVLine  0/112  Ram=8
+   ³  ³        ³  ÃÄstartWrite  0/2  Ram=0
+   ³  ³        ³  ÃÄsetAddrWindow  0/116  Ram=5
+   ³  ³        ³  ³  ÀÄ*
+   ³  ³        ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³        ³  ÀÄendWrite  0/2  Ram=0
+   ³  ³        ÀÄfillRect  0/166  Ram=12
+   ³  ³           ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtftPrintTest  0/544  Ram=8
+   ³  ³  ÃÄdisplay_setTextWrap  0/12  Ram=1
+   ³  ³  ÃÄdisplay_setCursor  0/18  Ram=4
+   ³  ³  ÃÄdisplay_setTextColor  0/20  Ram=4
+   ³  ³  ÃÄdisplay_setTextSize  0/18  Ram=1
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄdisplay_print  0/666  Ram=8
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄdisplay_setTextSize  0/18  Ram=1
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄdisplay_setTextSize  0/18  Ram=1
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄdisplay_setTextSize  0/18  Ram=1
+   ³  ³  ÃÄ@PRINTF_L32D_972FPFPF  0/422  Ram=13
+   ³  ³  ³  ÃÄ@MULFF  0/248  Ram=11
+   ³  ³  ³  ÃÄ@FTOSD  0/68  Ram=5
+   ³  ³  ³  ÃÄ@DIV3232  0/148  Ram=13
+   ³  ³  ³  ÃÄdisplay_print  0/666  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdisplay_print  0/666  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdisplay_print  0/666  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdisplay_print  0/666  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄ@DIV3232  0/148  Ram=13
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄdisplay_setCursor  0/18  Ram=4
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄdisplay_setTextSize  0/18  Ram=1
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_setTextSize  0/18  Ram=1
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄ@PRINTF_L32D_972FPFPF  0/422  Ram=13
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_X_972  0/70  Ram=2
+   ³  ³  ³  ÃÄdisplay_print  0/666  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄdisplay_print  0/666  Ram=8
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄ@PRINTF_X_972  0/70  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_X_972  0/70  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÃÄ@GET_TICKS_1  0/84  Ram=0
+   ³  ³  ÃÄ@PRINTF_L32U_972  0/192  Ram=12
+   ³  ³  ³  ÃÄ@DIV3232  0/148  Ram=13
+   ³  ³  ³  ÃÄdisplay_print  0/666  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄ@DIV3232  0/148  Ram=13
+   ³  ³  ÃÄdisplay_setTextColor  0/18  Ram=2
+   ³  ³  ÀÄ@PSTRINGC_972  0/32  Ram=2
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtestlines  0/456  Ram=6
+   ³  ³  ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³  ³  ÃÄdrawVLine  0/112  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdrawHLine  0/132  Ram=8
+   ³  ³  ³  ³  ÃÄstartWrite  0/2  Ram=0
+   ³  ³  ³  ³  ÃÄsetAddrWindow  0/116  Ram=5
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³  ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+   ³  ³  ³  ³  ÀÄendWrite  0/2  Ram=0
+   ³  ³  ³  ÀÄwriteLine  0/462  Ram=31
+   ³  ³  ³     ÃÄ@DIVS1616  0/120  Ram=6
+   ³  ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÀÄdrawPixel  0/74  Ram=7
+   ³  ³  ³        ÀÄ*
+   ³  ³  ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄdisplay_drawLine  0/246  Ram=16
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtestfastlines  0/86  Ram=6
+   ³  ³  ÃÄdrawHLine  0/132  Ram=8
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄdrawVLine  0/112  Ram=8
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtestdrawrects  0/84  Ram=5
+   ³  ³  ÀÄdisplay_drawRect  0/142  Ram=12
+   ³  ³     ÃÄdrawHLine  0/132  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawHLine  0/132  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawVLine  0/112  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄdrawVLine  0/112  Ram=8
+   ³  ³        ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtestfillrects  0/144  Ram=7
+   ³  ³  ÃÄfillRect  0/166  Ram=12
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄdisplay_drawRect  0/142  Ram=12
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtestfillcircles  0/80  Ram=5
+   ³  ³  ÀÄdisplay_fillCircle  0/108  Ram=12
+   ³  ³     ÃÄdrawVLine  0/112  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄdisplay_fillCircleHelper  0/618  Ram=31
+   ³  ³        ÃÄ@MUL1616  0/34  Ram=5
+   ³  ³        ÃÄ@MULS1616  0/84  Ram=6
+   ³  ³        ÃÄdrawVLine  0/112  Ram=8
+   ³  ³        ³  ÀÄ*
+   ³  ³        ÃÄ@MULS1616  0/84  Ram=6
+   ³  ³        ÃÄdrawVLine  0/112  Ram=8
+   ³  ³        ³  ÀÄ*
+   ³  ³        ÃÄ@MULS1616  0/84  Ram=6
+   ³  ³        ÃÄdrawVLine  0/112  Ram=8
+   ³  ³        ³  ÀÄ*
+   ³  ³        ÃÄ@MULS1616  0/84  Ram=6
+   ³  ³        ÀÄdrawVLine  0/112  Ram=8
+   ³  ³           ÀÄ*
+   ³  ÃÄtestdrawcircles  0/140  Ram=9
+   ³  ³  ÀÄdisplay_drawCircle  0/688  Ram=22
+   ³  ³     ÃÄ@MUL1616  0/34  Ram=5
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄdrawPixel  0/74  Ram=7
+   ³  ³        ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtestroundrects  0/134  Ram=8
+   ³  ³  ÀÄdisplay_drawRoundRect  0/704  Ram=20
+   ³  ³     ÃÄ@DIVS1616  0/120  Ram=6
+   ³  ³     ÃÄdrawHLine  0/132  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawHLine  0/132  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawVLine  0/112  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdrawVLine  0/112  Ram=8
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdisplay_drawCircleHelper  0/558  Ram=23
+   ³  ³     ³  ÃÄ@MUL1616  0/34  Ram=5
+   ³  ³     ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ³  ÀÄ*
+   ³  ³     ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ³  ÀÄ*
+   ³  ³     ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ³  ÀÄ*
+   ³  ³     ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ³  ÀÄ*
+   ³  ³     ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ³  ÀÄ*
+   ³  ³     ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ³  ÀÄ*
+   ³  ³     ³  ÃÄdrawPixel  0/74  Ram=7
+   ³  ³     ³  ³  ÀÄ*
+   ³  ³     ³  ÀÄdrawPixel  0/74  Ram=7
+   ³  ³     ³     ÀÄ*
+   ³  ³     ÃÄdisplay_drawCircleHelper  0/558  Ram=23
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdisplay_drawCircleHelper  0/558  Ram=23
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄdisplay_drawCircleHelper  0/558  Ram=23
+   ³  ³        ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄtesttriangles  0/110  Ram=7
+   ³  ³  ÀÄdisplay_drawTriangle  0/136  Ram=14
+   ³  ³     ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄdisplay_drawLine  0/246  Ram=16
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄdisplay_drawLine  0/246  Ram=16
+   ³  ³        ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄmediabuttons  0/466  Ram=1
+   ³  ³  ÃÄdisplay_fillRoundRect  0/384  Ram=20
+   ³  ³  ³  ÃÄ@DIVS1616  0/120  Ram=6
+   ³  ³  ³  ÃÄfillRect  0/166  Ram=12
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdisplay_fillCircleHelper  0/618  Ram=31
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄdisplay_fillCircleHelper  0/618  Ram=31
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄdisplay_fillTriangle  0/1510  Ram=62
+   ³  ³  ³  ÃÄdrawHLine  0/132  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@DIVS3232  0/234  Ram=14
+   ³  ³  ³  ÃÄ@DIVS3232  0/234  Ram=14
+   ³  ³  ³  ÃÄdrawHLine  0/132  Ram=8
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@MULS1616  0/84  Ram=6
+   ³  ³  ³  ÃÄ@MULS1616  0/84  Ram=6
+   ³  ³  ³  ÃÄ@DIVS3232  0/234  Ram=14
+   ³  ³  ³  ÃÄ@DIVS3232  0/234  Ram=14
+   ³  ³  ³  ÀÄdrawHLine  0/132  Ram=8
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄdisplay_fillRoundRect  0/384  Ram=20
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_fillRoundRect  0/384  Ram=20
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_fillRoundRect  0/384  Ram=20
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄdisplay_fillTriangle  0/1510  Ram=62
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄdisplay_fillRoundRect  0/384  Ram=20
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄdisplay_fillRoundRect  0/384  Ram=20
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄdisplay_fillTriangle  0/1510  Ram=62
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄinvertDisplay  0/32  Ram=2
+   ³  ³  ÃÄstartWrite  0/2  Ram=0
+   ³  ³  ÃÄwriteCommand  0/16  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄendWrite  0/2  Ram=0
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄinvertDisplay  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÀÄ@delay_ms1  0/42  Ram=1
+   ÀÄ@TIMERISR_1  0/22  Ram=0

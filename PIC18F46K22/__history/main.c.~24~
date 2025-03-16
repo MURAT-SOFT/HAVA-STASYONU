@@ -1,0 +1,269 @@
+//  PIC18F46K22 MCU ST7789 2.4 INÇ TFT EKRAN 
+//    HAVA ÝSTASYONU HG-2 CÝHAZI MURAT IRKAN 2024
+#define TFT_RST   PIN_D0     // RESET PÝN 
+#define TFT_DC    PIN_D1     // DATA VE KOMUT PÝN
+//#define TFT_CS    PIN_D2   // CHÝP SEÇÝMÝ PÝNÝ -> CS pin
+#include <18F46K22.h>
+#fuses  NOMCLR,NOLVP,NOBROWNOUT,PUT,NOXINST
+#use delay(internal = 64MHz) // PIC18F46K22 MCU DAHÝLÝ KRÝSTAL AKTÝF.!
+#use SPI(SPI1, MODE = 2, BITS = 8, STREAM = ST7789)// SPI BAGLANTI PARAMETRELERÝ
+#use TIMER(TIMER = 1, TICK = 1024us, ISR)// ZAMANLAMA AYARI
+#include <ST7789.c>       
+#include <GFX_Library.c>  
+void testlines(uint16_t color) {
+  uint8_t x, y;
+  EKRAN_BOYA(ST7789_BLACK);
+  for (x=0; x < display_width; x+=6) {
+    display_drawLine(0, 0, x, display_height-1, color);
+    delay_ms(0);
+  }
+  for (y=0; y < display_height; y+=6) {
+    display_drawLine(0, 0, display_width-1, y, color);
+    delay_ms(0);
+  }
+
+  EKRAN_BOYA(ST7789_BLACK);
+  for (x=0; x < display_width; x+=6) {
+    display_drawLine(display_width-1, 0, x, display_height-1, color);
+    delay_ms(0);
+  }
+  for (y=0; y < display_height; y+=6) {
+    display_drawLine(display_width-1, 0, 0, y, color);
+    delay_ms(0);
+  }
+
+  EKRAN_BOYA(ST7789_BLACK);
+  for (x=0; x < display_width; x+=6) {
+    display_drawLine(0, display_height-1, x, 0, color);
+    delay_ms(0);
+  }
+  for (y=0; y < display_height; y+=6) {
+    display_drawLine(0, display_height-1, display_width-1, y, color);
+    delay_ms(0);
+  }
+
+  EKRAN_BOYA(ST7789_BLACK);
+  for (x=0; x < display_width; x+=6) {
+    display_drawLine(display_width-1, display_height-1, x, 0, color);
+    delay_ms(0);
+  }
+  for (y=0; y < display_height; y+=6) {
+    display_drawLine(display_width-1, display_height-1, 0, y, color);
+    delay_ms(0);
+  }
+}
+
+void testdrawtext(char *text, uint16_t color) {
+  display_setCursor(0, 0);
+  display_setTextColor(color);
+  display_setTextWrap(true);
+  printf(display_print, text);
+}
+
+void testfastlines(uint16_t color1, uint16_t color2) {
+  uint8_t x, y;
+  EKRAN_BOYA(ST7789_BLACK);
+  for (y=0; y < display_height; y+=5) {
+    display_drawHLine(0, y, display_width, color1);
+  }
+  for (x=0; x < display_width; x+=5) {
+    display_drawVLine(x, 0, display_height, color2);
+  }
+}
+
+void testdrawrects(uint16_t color) {
+  uint8_t x;
+  EKRAN_BOYA(ST7789_BLACK);
+  for (x=0; x < display_width; x+=6) {
+    display_drawRect(display_width/2 -x/2, display_height/2 -x/2 , x, x, color);
+  }
+}
+
+void testfillrects(uint16_t color1, uint16_t color2) {
+  uint8_t x;
+  EKRAN_BOYA(ST7789_BLACK);
+  for (x=display_width-1; x > 6; x-=6) {
+    display_fillRect(display_width/2 -x/2, display_height/2 -x/2 , x, x, color1);
+    display_drawRect(display_width/2 -x/2, display_height/2 -x/2 , x, x, color2);
+  }
+}
+
+void testfillcircles(uint8_t radius, uint16_t color) {
+  uint8_t x, y;
+  for (x=radius; x < display_width; x+=radius*2) {
+    for (y=radius; y < display_height; y+=radius*2) {
+      display_fillCircle(x, y, radius, color);
+    }
+  }
+}
+
+void testdrawcircles(uint8_t radius, uint16_t color) {
+  uint16_t x, y;
+  for (x=0; x < (uint16_t)display_width+radius; x+=radius*2) {
+    for (y=0; y < (uint16_t)display_height+radius; y+=radius*2) {
+      display_drawCircle(x, y, radius, color);
+    }
+  }
+}
+
+void testtriangles() {
+  EKRAN_BOYA(ST7789_BLACK);
+  uint16_t color = 0xF800;
+  uint8_t t,
+          w = display_width / 2,
+          x = display_height - 1,
+          y = 0,
+          z = display_width;
+  for(t = 0 ; t <= 27; t++) {
+    display_drawTriangle(w, y, y, x, z, x, color);
+    x-=4;
+    y+=4;
+    z-=4;
+    color+=60;
+  }
+}
+
+void testroundrects() {
+  EKRAN_BOYA(ST7789_BLACK);
+  uint16_t color = 100;
+  uint8_t i, t;
+  for(t = 0 ; t <= 4; t+=1) {
+    uint8_t x = 0,
+            y = 0,
+            w = display_width - 2,
+            h = display_height - 2;
+    for(i = 0 ; i <= 26; i+=1) {
+      display_drawRoundRect(x, y, w, h, 5, color);
+      x+=2;
+      y+=3;
+      w-=4;
+      h-=6;
+      color+=1100;
+    }
+    color+=100;
+  }
+}
+
+void tftPrintTest() {
+  float p = 3.1415926;
+  display_setTextWrap(false);
+  EKRAN_BOYA(ST7789_BLACK);
+  display_setCursor(0, 30);
+  display_setTextColor(ST7789_RED, ST7789_BLACK);
+  display_setTextSize(1);
+  display_print("Hello World!\r\n");
+  display_setTextColor(ST7789_YELLOW);
+  display_setTextSize(2);
+  display_print("Hello World!\r\n");
+  display_setTextColor(ST7789_GREEN);
+  display_setTextSize(3);
+  display_print("Hello World!\r\n");
+  display_setTextColor(ST7789_BLUE);
+  display_setTextSize(4);
+  printf(display_print, "%f", 1234.567);
+  delay_ms(1500);
+  display_setCursor(0, 0);
+  EKRAN_BOYA(ST7789_BLACK);
+  display_setTextColor(ST7789_WHITE);
+  display_setTextSize(0);
+  display_print("MURAT IRKAN\r\n");
+  display_setTextSize(1);
+  display_setTextColor(ST7789_GREEN);
+  printf(display_print, "%8f", p);
+  display_print(" Want pi?\r\n");
+  display_print(" \r\n");
+  printf(display_print, "%6LX", 8675309); // print 8,675,309 out in HEX!
+  display_print(" Print HEX!\r\n");
+  display_print(" \r\n");
+  display_setTextColor(ST7789_WHITE);
+  display_print("Sketch has been\r\n");
+  display_print("running for: \r\n");
+  display_setTextColor(ST7789_MAGENTA);
+  printf(display_print, "%Lu", get_ticks() / 1024);
+  display_setTextColor(ST7789_WHITE);
+  display_print(" seconds.");
+}
+
+void mediabuttons() {
+  // play
+  EKRAN_BOYA(ST7789_BLACK);
+  display_fillRoundRect(81, 50, 78, 60, 8, ST7789_WHITE);
+  display_fillTriangle(98, 60, 98, 100, 146, 80, ST7789_RED);
+  delay_ms(500);
+  // pause
+  display_fillRoundRect(81, 130, 78, 60, 8, ST7789_WHITE);
+  display_fillRoundRect(95, 138, 20, 45, 5, ST7789_GREEN);
+  display_fillRoundRect(125, 138, 20, 45, 5, ST7789_GREEN);
+  delay_ms(500);
+  // play color
+  display_fillTriangle(98, 60, 98, 100, 146, 80, ST7789_BLUE);
+  delay_ms(50);
+  // pause color
+  display_fillRoundRect(95, 138, 20, 45, 5, ST7789_RED);
+  display_fillRoundRect(125, 138, 20, 45, 5, ST7789_RED);
+  // play color
+  display_fillTriangle(98, 60, 98, 100, 146, 80, ST7789_GREEN);
+}
+
+// main function
+void main(void)
+{
+  enable_interrupts(GLOBAL);   // enable global interrupts
+
+  // initialize the ST7789 display
+  tft_init();
+
+  // fill screen with black
+  EKRAN_BOYA(ST7789_BLACK);
+
+  // large block of text
+  testdrawtext((char *)"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur adipiscing ante sed nibh tincidunt feugiat. Maecenas enim massa, fringilla sed malesuada et, malesuada sit amet turpis. Sed porttitor neque ut ante pretium vitae malesuada nunc bibendum. Nullam aliquet ultrices massa eu hendrerit. Ut sed nisi lorem. In vestibulum purus a tortor imperdiet posuere. ", ST7789_WHITE);
+  delay_ms(1000);
+
+  // tft print function!
+  tftPrintTest();
+  delay_ms(4000);
+
+  // a single pixel
+  display_drawPixel(display_width/2, display_height/2, ST7789_GREEN);
+  delay_ms(500);
+
+  // line draw test
+  testlines(ST7789_YELLOW);
+  delay_ms(500);
+
+  // optimized lines
+  testfastlines(ST7789_RED, ST7789_BLUE);
+  delay_ms(500);
+
+  testdrawrects(ST7789_GREEN);
+  delay_ms(500);
+
+  testfillrects(ST7789_YELLOW, ST7789_MAGENTA);
+  delay_ms(500);
+
+  EKRAN_BOYA(ST7789_BLACK);
+  testfillcircles(10, ST7789_BLUE);
+  testdrawcircles(10, ST7789_WHITE);
+  delay_ms(500);
+
+  testroundrects();
+  delay_ms(500);
+
+  testtriangles();
+  delay_ms(500);
+
+  mediabuttons();
+  delay_ms(500);
+
+  while(TRUE)
+  {
+    display_Invert(true);
+    delay_ms(500);
+    display_Invert(false);
+    delay_ms(500);
+  }
+
+}
+
+// end of code.

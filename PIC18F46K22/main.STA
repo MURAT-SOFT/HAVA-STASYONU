@@ -1,0 +1,121 @@
+
+ROM used:   14334/65536 (22%)
+            65536/65536 (100%) including unused fragments
+
+            4.6 Average locations per line
+            22.8 Average locations per statement
+
+RAM used:   418/3896 (11%) at main() level
+            490/3896 (13%) worst case
+
+Stack used: 7 worst case (6 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  263   154  25  main.c
+ 1065     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\18F46K22.h
+  465   125  20  ST7789.c
+  195     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h
+ 1135   349  56  GFX_Library.c
+----- -----
+ 3123   628 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     30   0    7             @READ_PROGRAM_MEMORY
+0     42   0    1             @delay_ms1
+0     16   0    3             @SPI_XFER_1_8
+0     22   0    0             @TIMERISR_1
+0     84   0    0             @GET_TICKS_1
+0      2   0    0      5  1.0  startWrite
+0      2   0    0      5  1.0  endWrite
+0     16   0    1     70  1.6  writeCommand
+0    328   1    7    511  6.6  displayInit
+0     84   0    0    305  1.8  tft_init
+0    116   0    5    515  3.4  setAddrWindow
+0    110   0    2    687  5.3  setRotation
+0     34   0    0             @goto32240
+0     74   0    7    279  4.2  drawPixel
+0    132   0    8    595  7.7  drawHLine
+0    112   0    8    505  6.7  drawVLine
+0    166   1   12    743  7.7  fillRect
+0     34   0    5             @MUL1616
+0     32   0    2     70  2.0  invertDisplay
+0   1294   5    0             @const1034
+0    462   2   31   1402  7.8  writeLine
+0    120   0    6             @DIVS1616
+0    246   1   16    668  5.3  display_drawLine
+0    688   2   22   1481  7.4  display_drawCircle
+0    558   2   23   1369  7.8  display_drawCircleHelper
+0    108   0   12    215  3.2  display_fillCircle
+0    618   2   31   1462  8.3  display_fillCircleHelper
+0     84   0    6             @MULS1616
+0    142   0   12    345  2.8  display_drawRect
+0    704   2   20   1335  6.9  display_drawRoundRect
+0    384   1   20    702  6.8  display_fillRoundRect
+0    136   0   14    302  1.9  display_drawTriangle
+0   1510   5   62   3297  9.4  display_fillTriangle
+0    234   1   14             @DIVS3232
+0    666   2    8   1986 10.3  display_print
+0     18   0    4     59  2.0  display_setCursor
+0     18   0    1     60  2.7  display_setTextSize
+0     20   0    4     57  2.2  display_setTextColor
+0     18   0    2     33  1.7  display_setTextColor
+0     12   0    1     27  1.3  display_setTextWrap
+0    456   2    6   1946  4.4  testlines
+0     48   0    4    123  2.2  testdrawtext
+0     38   0    2             @PSTRINGR_972
+0     86   0    6    317  3.7  testfastlines
+0     84   0    5    229  4.6  testdrawrects
+0    144   1    7    415  4.7  testfillrects
+0     80   0    5    281  4.2  testfillcircles
+0    140   0    9    334  4.7  testdrawcircles
+0    110   0    7    423  5.7  testtriangles
+0    134   0    8    585  4.8  testroundrects
+0    544   2    8   1099  2.9  tftPrintTest
+0     16   0    0             @const1174
+0     32   0    2             @PSTRINGC_972
+0     16   0    0             @const1176
+0     16   0    0             @const1177
+0    248   1   11             @MULFF
+0     68   0    5             @FTOSD
+0    148   1   13             @DIV3232
+0    422   1   13             @PRINTF_L32D_972FPFPF
+0     14   0    0             @const1190
+0     12   0    0             @const1192
+0      4   0    0             @const1193
+0     70   0    2             @PRINTF_X_972
+0     14   0    0             @const1198
+0      4   0    0             @const1199
+0     18   0    0             @const1200
+0     16   0    0             @const1201
+0    192   1   12             @PRINTF_L32U_972
+0     10   0    0             @const1205
+0    466   2    1    918  1.9  mediabuttons
+0    622   2  370    866  3.3  MAIN
+0    380   1    0             @const1210
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               41
+    Statements              628
+    Comments                820
+    Volume (V)              46885
+    Difficulty (D)          184.2
+    Effort to implement (E) 8635881
+    Time to implement (T)   133 hours, 16 minutes
+    Est Delivered Bugs (B)  14
+    Cyclomatic Complexity   87
+    Maintainability (MI)    120
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     4  0  
+00008-000AC   166  0  
+000AE-0FFDA  14124  51202  
+0FFDC-0FFFE    36  0  
+
+
+
