@@ -1,0 +1,8 @@
+MICROCHIP 9808 I2C BAGLANTILI SICAKLIK SENSORÜ
+VDD->BESLEME VOLTAJI:2.7-5.5v
+kullanılan akım:max:400uA-normal:200uA
+sıcaklık doğruluk oranı:0.5+- derece
+cevrim zamanlaması:0.5 derecede 30milisaniye
+0.25 derecede 65ms
+
+
