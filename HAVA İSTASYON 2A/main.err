@@ -1,0 +1,5 @@
+Compiling C:\Users\murat\OneDrive\Desktop\HAVA ÝSTASYON\main on 06-Tem-25 at 06:58
+>>> Warning 240 "C:\Users\murat\OneDrive\Desktop\HAVA ÝSTASYON\main.c" Line 92(22,30): Pointer types do not match
+      Memory usage:   ROM=18%      RAM=5% - 11%
+      0 Errors,  1 Warnings.
+Build Successful.

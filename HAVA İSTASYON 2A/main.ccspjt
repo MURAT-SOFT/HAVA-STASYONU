@@ -1,0 +1,43 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\murat\OneDrive\Desktop\HAVA ÝSTASYON\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=06-07-2025
+D1_L=4
+D1_L1=[24652]Project Opened.
+D1_L2=[24655]Started Editing.
+D1_L3=[25033]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L4=[25310]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+Count=1
+[main.c]
+Type=4
+
+[defines]
+buildcount=6
+[Units]
+Count=1
+1=main (main)
